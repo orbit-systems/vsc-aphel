@@ -14,7 +14,11 @@
       "id": "aphelion",
       "aliases": ["Aphelion", "aphelion"],
       "extensions": [".aphel",".aphelion"],
-      "configuration": "./language-configuration.json"
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "dark":"./icons/icon.png",
+        "light":"./icons/icon.png"
+      }
     }],
     "grammars": [{
       "language": "aphelion",

@@ -51,7 +51,7 @@
         "numbers": {
             "patterns": [{
                 "name": "constant.numeric.aphelion",
-                "match": "\\b((0b[0-1]+|0o[1-7]+|0x[0-9a-fA-F]+|\\d+))\\b"
+                "match": "\\b((0b[0-1]+|0o[0-7]+|0x[0-9a-fA-F]+|\\d+))\\b"
             }] 
         },
 		"strings": {
