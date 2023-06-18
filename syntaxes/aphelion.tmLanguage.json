@@ -24,7 +24,11 @@
 		"comments": {
 			"patterns": [{
 				"name": "comment.line.aphelion",
-				"match": "(\\s)*#.*$"
+				"match": "(\\s)*//.*$"
+			},{
+				"name": "comment.block.aphelion",
+				"begin": "/\\*",
+				"end": "\\*/"
 			}]
 		},
         "instructions": {
