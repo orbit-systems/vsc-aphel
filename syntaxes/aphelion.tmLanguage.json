@@ -73,6 +73,9 @@
 			"patterns": [{
 				"name": "entity.name.function.aphelion",
 				"match": "^\\s*[A-Za-z_-][A-Za-z0-9_-]*:\\s"
+			},{
+				"name": "entity.name.function.aphelion",
+                "match": "\\s*\\>[A-Za-z_-][A-Za-z0-9_-]*\\s"
 			}]
 		},
         "characters": {
