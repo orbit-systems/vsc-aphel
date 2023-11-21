@@ -42,8 +42,11 @@
 		},
 		"directives": {
 			"patterns": [{
-				"name": "meta.preprocessor.aphelion",
+				"name": "keyword.operator.aphelion",
 				"match": "\\.\\w+\\b"
+			},{
+				"name": "keyword.operator.aphelion",
+				"match": "="
 			}]
 		},
         "registers": {
