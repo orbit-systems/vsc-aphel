@@ -3,9 +3,9 @@
 	"name": "Aphelion",
 	"patterns": [
 		{
-            "include": "#instructions"
-        },{
             "include": "#directives"
+        },{
+            "include": "#instructions"
         },{
             "include": "#comments"
         },{
@@ -43,7 +43,10 @@
 		"directives": {
 			"patterns": [{
 				"name": "keyword.operator.aphelion",
-				"match": "\\.\\w+\\b"
+				"match": "(\\b)*\\.\\w+(\\b)*"
+			},{
+				"name": "keyword.operator.aphelion",
+				"match": "(\\b)*(define|bind|type|size|section|blank|info)(\\b)*"
 			},{
 				"name": "keyword.operator.aphelion",
 				"match": "="
