@@ -5,6 +5,8 @@
 		{
             "include": "#directives"
         },{
+            "include": "#labels"
+        },{
             "include": "#instructions"
         },{
             "include": "#comments"
@@ -15,8 +17,6 @@
         },{
             "include": "#strings"
         },{
-            "include": "#labels"
-        },{
             "include": "#characters"
         }
 	],
@@ -26,6 +26,9 @@
 				"name": "comment.line.aphelion",
 				"match": "(\\s)*//.*$"
 			},{
+				"name": "comment.line.aphelion",
+				"match": ";.*$"
+			},{
 				"name": "comment.block.aphelion",
 				"begin": "/\\*",
 				"end": "\\*/"
@@ -34,17 +37,14 @@
         "instructions": {
 			"patterns": [{
 				"name": "keyword.control.aphelion",
-				"match": "^\\s*(\\w+)\\s"
+				"match": "^\\s*([\\w\\._]+)\\b"
 			},{
 				"name": "keyword.control.aphelion",
-				"match": "(?<=:)\\s*(\\w+)\\s"
+				"match": "(?<=:)\\s*([\\w\\._]+)\\b"
 			}]
 		},
 		"directives": {
 			"patterns": [{
-				"name": "keyword.operator.aphelion",
-				"match": "(\\b)*\\.\\w+(\\b)*"
-			},{
 				"name": "keyword.operator.aphelion",
 				"match": "(\\b)*(define|bind|type|size|section|blank|info)(\\b)*"
 			},{
@@ -61,8 +61,11 @@
         "numbers": {
             "patterns": [{
                 "name": "constant.numeric.aphelion",
-                "match": "\\b((0b[0-1_]+|0o[0-7_]+|0x[0-9a-fA-F_]+|0d[0-9_]+|[0-9_]+))\\b"
-            }] 
+                "match": "\\b[-]?((0b[0-1_]+|0o[0-7_]+|0x[0-9a-fA-F_]+|0d[0-9_]+|[0-9_]+))\\b"
+            },{
+                "name": "constant.numeric.aphelion",
+                "match": "\\b[-]?(\\d+([.]\\d*)?(e[+-]?\\d+)?|[.]\\d+(e[+-]?\\d+)?)[hfd]\\b"
+            }]
         },
 		"strings": {
 			"name": "string.quoted.double.aphelion",
@@ -78,10 +81,10 @@
 		"labels": {
 			"patterns": [{
 				"name": "entity.name.function.aphelion",
-				"match": "^\\s*[A-Za-z_-][A-Za-z0-9_-]*:\\s"
+				"match": "^\\s*[.A-Za-z_-][.A-Za-z0-9_-]*:\\s"
 			},{
 				"name": "entity.name.function.aphelion",
-                "match": "\\s*\\>[A-Za-z_-][A-Za-z0-9_-]*\\s"
+                "match": "\\s*\\>[.A-Za-z_-][.A-Za-z0-9_-]*\\s"
 			}]
 		},
         "characters": {
